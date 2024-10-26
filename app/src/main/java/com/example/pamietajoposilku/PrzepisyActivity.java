@@ -15,12 +15,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
+
 
 public class PrzepisyActivity extends AppCompatActivity{
 
     private RecyclerView _PrzepisyRecyclerView;
     private PrzepisyRecycleViewAdapter _PrzepisyRecycleViewAdapter;
-    private ArrayList<Przepis> _przepisy;
+    private List<Recipe> _przepisy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +39,7 @@ public class PrzepisyActivity extends AppCompatActivity{
         _PrzepisyRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         _przepisy = new ArrayList<>();
-        _PrzepisyRecycleViewAdapter = new PrzepisyRecycleViewAdapter(_przepisy);
+        _PrzepisyRecycleViewAdapter = new PrzepisyRecycleViewAdapter((ArrayList<Recipe>) _przepisy);
         _PrzepisyRecyclerView.setAdapter(_PrzepisyRecycleViewAdapter);
 
         Button nowyPrzepisButton = findViewById(R.id.nowyPrzepisButton);
@@ -55,10 +57,10 @@ public class PrzepisyActivity extends AppCompatActivity{
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
                 if (result.getResultCode() == RESULT_OK && result.getData() != null) {
-                    Przepis nowyPrzepis = (Przepis) result.getData().getSerializableExtra("NOWY_PRZEPIS");
+                    Recipe nowyRecipe = (Recipe) result.getData().getSerializableExtra("NOWY_PRZEPIS");
 
-                    if (nowyPrzepis != null) {
-                        _przepisy.add(nowyPrzepis);
+                    if (nowyRecipe != null) {
+                        _przepisy.add(nowyRecipe);
                         _PrzepisyRecycleViewAdapter.notifyDataSetChanged();
                     }
                 }

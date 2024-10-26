@@ -1,5 +1,4 @@
 package com.example.pamietajoposilku;// PrzepisyAdapter.java
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +10,9 @@ import java.util.ArrayList;
 
 public class PrzepisyRecycleViewAdapter extends RecyclerView.Adapter<PrzepisyRecycleViewAdapter.PrzepisViewHolder>{
 
-    private ArrayList<Przepis> _przepisyArrayList;
+    private ArrayList<Recipe> _przepisyArrayList;
 
-    public PrzepisyRecycleViewAdapter(ArrayList<Przepis> przepisyArrayList) {
+    public PrzepisyRecycleViewAdapter(ArrayList<Recipe> przepisyArrayList) {
         this._przepisyArrayList = przepisyArrayList;
     }
 
@@ -27,8 +26,8 @@ public class PrzepisyRecycleViewAdapter extends RecyclerView.Adapter<PrzepisyRec
 
     @Override
     public void onBindViewHolder(@NonNull PrzepisViewHolder holder, int position) {
-        Przepis przepis = _przepisyArrayList.get(position);
-        holder.nazwaTextView.setText(przepis.getRecipeName());
+        Recipe recipe = _przepisyArrayList.get(position);
+        holder.nazwaTextView.setText(recipe.getRecipeName());
 
 
 

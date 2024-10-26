@@ -18,18 +18,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class PrzepisActivity extends AppCompatActivity {
 
     private SkladnikiRecyclerViewAdapter adapter;
-    private ArrayList<Skladnik> skladnikList;
+    private ArrayList<Ingredient> ingredientList;
 
     private EditText przepisNazwa;
     private EditText przepisPrzygotowanie;
 
     private String inputPrzepisNazwa;
     private String inputPrzepisPrzygotowanie;
+    private String ingredients;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +42,8 @@ public class PrzepisActivity extends AppCompatActivity {
             return insets;
         });
 
-        skladnikList = new ArrayList<>();
-        adapter = new SkladnikiRecyclerViewAdapter(skladnikList);
+        ingredientList = new ArrayList<>();
+        adapter = new SkladnikiRecyclerViewAdapter(ingredientList);
 
         RecyclerView recyclerView = findViewById(R.id.recyclerViewSkladniki);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -59,6 +59,7 @@ public class PrzepisActivity extends AppCompatActivity {
 
         przepisNazwa = findViewById(R.id.etPrzepisNazwa);
         przepisPrzygotowanie = findViewById(R.id.etPrzepisPrzygotowanie);
+        ingredients = "";
 
         Button dodajPrzepisButton = findViewById(R.id.dodajPrzepisButton);
         dodajPrzepisButton.setOnClickListener(view -> {
@@ -92,8 +93,9 @@ public class PrzepisActivity extends AppCompatActivity {
                     String jednostka = ingredientUnitEditText.getText().toString();
 
                     // Dodanie nowego składnika do listy
-                    Skladnik skladnik = new Skladnik(nazwa, ilosc, jednostka);
-                    adapter.dodajSkladnik(skladnik);
+                    Ingredient ingredient = new Ingredient(nazwa, ilosc, jednostka);
+                    adapter.dodajSkladnik(ingredient);
+                    ingredients += ingredient.get_ingredintString();
 
                     // Zamknięcie dialogu
                     bottomSheetDialog.dismiss();
@@ -115,10 +117,10 @@ public class PrzepisActivity extends AppCompatActivity {
             return;
         }
 
-        Przepis przepis = new Przepis(inputPrzepisNazwa, skladnikList, inputPrzepisPrzygotowanie);
+        Recipe recipe = new Recipe(inputPrzepisNazwa, ingredients, inputPrzepisPrzygotowanie);
 
         Intent resultIntent = new Intent();
-        resultIntent.putExtra("NOWY_PRZEPIS", przepis);
+        resultIntent.putExtra("NOWY_PRZEPIS", recipe);
         setResult(RESULT_OK, resultIntent);
         finish();
 
