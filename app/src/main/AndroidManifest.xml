@@ -10,19 +10,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Pamietajoposilku"
+        android:theme="@style/Theme.Pamietaj_o_posilku_baza"
         tools:targetApi="31">
         <activity
-            android:name=".PrzepisActivity"
+            android:name=".RecipeDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".DodajSkladnikActivity"
+            android:name=".AddRecipeActivity"
             android:exported="false" />
         <activity
-            android:name=".PrzepisyActivity"
-            android:exported="false" />
-        <activity
-            android:name=".PlanowaniePosilkowActivity"
+            android:name=".RecipesActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

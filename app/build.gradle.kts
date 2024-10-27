@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.pamietajoposilku"
+    namespace = "com.example.pamietaj_o_posilku_baza"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.pamietajoposilku"
+        applicationId = "com.example.pamietaj_o_posilku_baza"
         minSdk = 28
         targetSdk = 34
         versionCode = 1
@@ -37,13 +37,15 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
-    implementation(libs.firebase.crashlytics.buildtools)
+    implementation(libs.adapters)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
-    val room_version = "2.6.1"
+    //Database
+    implementation(libs.room.runtime)
+    annotationProcessor(libs.room.compiler)
 
-    implementation("androidx.room:room-runtime:$room_version")
-    annotationProcessor("androidx.room:room-compiler:$room_version")
+    //Cos tam nwm
+    implementation(libs.gson)
 }

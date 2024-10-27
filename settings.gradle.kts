@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "pamietajoposilku"
+rootProject.name = "pamietaj_o_posilku_baza"
 include(":app")
  

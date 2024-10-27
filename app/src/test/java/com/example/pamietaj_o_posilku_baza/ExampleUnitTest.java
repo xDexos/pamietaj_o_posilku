@@ -1,4 +1,4 @@
-package com.example.pamietajoposilku;
+package com.example.pamietaj_o_posilku_baza;
 
 import org.junit.Test;
 

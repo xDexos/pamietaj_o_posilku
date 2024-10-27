@@ -13,42 +13,47 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
         android:text="Pamiętaj O Posiłku"
-        android:textSize="40dp"
+        android:textSize="32dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.106" />
+        app:layout_constraintVertical_bias="0.050" />
 
-    <ImageButton
-        android:id="@+id/planowaniePosilkowButton"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="60dp"
-        android:scaleType="fitCenter"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="356dp"
+        android:layout_height="609dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/przepisyButton"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@android:drawable/ic_menu_recent_history" />
-
-    <ImageButton
-        android:id="@+id/przepisyButton"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="20dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/planowaniePosilkowButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@android:drawable/ic_menu_edit" />
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <ImageButton
+            android:id="@+id/ibRecipesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.029"
+            android:contentDescription="Przycisk1"
+            app:srcCompat="@android:drawable/ic_menu_edit" />
+
+        <ImageButton
+            android:id="@+id/ibPlanMealsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.173"
+            android:contentDescription="Przycisk2"
+            app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
