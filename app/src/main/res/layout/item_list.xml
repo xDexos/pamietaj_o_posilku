@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="5dp"
+    android:backgroundTint="#9cc963"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#addd6c">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageView"
+            android:layout_margin="10dp"
+            android:layout_gravity="start|center"
+            android:src="@drawable/list"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/nazwaListyCardView"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="5dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#addd6c">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nazwaListyTextView"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:text="Nazwa listy"
+            android:layout_margin="10dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dataListyCardView"
+        app:cardCornerRadius="20dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#ceeaaf">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dataListyTextView"
+            android:textColor="@color/black"
+            android:text="Data listy"
+            android:paddingHorizontal="10dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_gravity="end"
+        android:layout_margin="10dp">
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/deleteButton"
+            android:contentDescription="Delete ingredient"
+            android:src="@drawable/bin_red"
+            android:background="#addd6c"/>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".health.bmi_calculator.BmiCalculatorFragment" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical" >
+
+        <!--        <TextView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:text="Zdrowie"-->
+        <!--            android:textSize="40dp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:gravity="center"-->
+        <!--            android:textColor="@color/black"/>-->
+
+        <!--        <androidx.cardview.widget.CardView-->
+        <!--            android:layout_width="300dp"-->
+        <!--            android:layout_height="80dp"-->
+        <!--            app:cardCornerRadius="20dp"-->
+        <!--            android:layout_margin="5dp"-->
+        <!--            android:backgroundTint="@color/cardview_shadow_start_color">-->
+
+        <!--            <ImageButton-->
+        <!--                android:layout_width="60dp"-->
+        <!--                android:layout_height="60dp"-->
+        <!--                android:id="@+id/weightImageButton"-->
+        <!--                android:layout_gravity="center|left"-->
+        <!--                android:layout_marginLeft="10dp"-->
+        <!--                android:src="@drawable/monitor_weight"-->
+        <!--                android:background=""-->
+        <!--                android:contentDescription="test" />-->
+
+        <!--            <TextView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:id="@+id/weightTextView"-->
+        <!--                android:textSize="35dp"-->
+        <!--                android:textStyle="bold"-->
+        <!--                android:layout_gravity="center|right"-->
+        <!--                android:layout_marginRight="30dp"-->
+        <!--                android:textColor="@color/black"-->
+        <!--                android:text="Waga" />-->
+
+        <!--        </androidx.cardview.widget.CardView>-->
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/weightEditText"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:background="@color/cardview_shadow_start_color"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:hint="Wprowadź swoją wagę" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/heightEditText"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:background="@color/cardview_shadow_start_color"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:hint="Wprowadź swoją wysokość" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Oblicz BMI"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:background="@color/cardview_shadow_start_color"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:id="@+id/calculateBMIDialogButton" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:background="@color/cardview_shadow_start_color"
+            android:padding="10dp"
+            android:layout_margin="50dp"
+            android:id="@+id/bmiTextView"
+            android:gravity="center"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</FrameLayout>
