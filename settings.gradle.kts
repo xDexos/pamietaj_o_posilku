@@ -16,9 +16,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven("https://jitpack.io")
     }
 }
 
-rootProject.name = "pamietaj_o_posilku_baza"
+rootProject.name = "application_remake"
 include(":app")
- 

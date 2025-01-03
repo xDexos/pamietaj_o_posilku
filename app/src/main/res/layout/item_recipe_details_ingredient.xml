@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardView"
+        android:layout_margin="2dp"
+        app:cardCornerRadius="20dp"
+        android:backgroundTint="#abc4ff">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#c1d3fe">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/imageView"
+                android:layout_margin="10dp"
+                android:layout_gravity="start|center"
+                android:src="@drawable/bakery"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp"
+            android:layout_marginHorizontal="70dp"
+            android:layout_marginBottom="4dp"
+            android:backgroundTint="#c1d3fe">
+
+            <TextView
+                android:id="@+id/ingredientName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_toEndOf="@id/cardView"
+                android:gravity="center"
+                android:text="Nazwa składnika"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="2dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_gravity="end|center"
+            android:layout_marginRight="10dp">
+
+<!--            <ImageButton-->
+<!--                android:layout_width="60dp"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:id="@+id/deleteButton"-->
+<!--                android:layout_gravity="end|center"-->
+<!--                android:contentDescription="Delete ingredient"-->
+<!--                android:src="@drawable/bin_red"-->
+<!--                android:background="#c1d3fe"/>-->
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingredientTypeCardView"
+            android:layout_gravity="bottom|center"
+            app:cardCornerRadius="20dp"
+            android:layout_marginBottom="4dp"
+            android:backgroundTint="#ccdbfd">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ingredientType"
+                android:text="Typ składnika"
+                android:textSize="10dp"
+                android:textColor="@color/black"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

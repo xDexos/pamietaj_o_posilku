@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:backgroundTint="#c1d3fe" >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:backgroundTint="#d7e3fc"
+        android:layout_margin="5dp"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dobre praktyki \n przechowywania składników"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="5dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="25dp"
+        android:text="Mąka pszenna: Przechowuj w suchym, szczelnym pojemniku, aby uniknąć wilgoci i insektów.\n
+Cukier: Trzymaj w hermetycznym pojemniku z dala od wilgoci, aby zapobiec zbrylaniu się.\n
+Masło: Przechowuj w lodówce, a po otwarciu szczelnie zamykaj, aby uniknąć chłonięcia zapachów.\n
+Mleko 3,2%: Przechowuj w lodówce w temperaturze 0–4°C i zużyj przed upływem terminu przydatności.\n
+Jajko: Przechowuj w lodówce w oryginalnym opakowaniu, spiczastym końcem w dół, aby zachować świeżość.\n
+Chleb żytni: Trzymaj w papierowej torbie w temperaturze pokojowej, aby uniknąć pleśni.\n
+Ser żółty: Przechowuj w lodówce w opakowaniu lub folii spożywczej, aby uniknąć wysychania.\n
+Ziemniaki: Trzymaj w ciemnym, chłodnym miejscu, aby zapobiec kiełkowaniu.\n
+Pomidory: Przechowuj w temperaturze pokojowej, aby zachować smak i konsystencję.\n
+Jabłka: Trzymaj w chłodnym miejscu lub w lodówce, aby przedłużyć ich trwałość.\n
+Ryż biały: Przechowuj w suchym, szczelnym pojemniku z dala od wilgoci.\n
+Oliwa z oliwek: Trzymaj w ciemnym, chłodnym miejscu, aby uniknąć utleniania.\n
+Pierś z kurczaka: Przechowuj w lodówce i zużyj w ciągu 1–2 dni od zakupu.\n
+Łosoś: Przechowuj w lodówce lub zamrażarce, szczelnie owinięty, aby zachować świeżość.\n
+Cebula: Trzymaj w chłodnym, suchym i przewiewnym miejscu, z dala od ziemniaków.\n
+Czekolada gorzka 70%: Przechowuj w chłodnym, suchym miejscu z dala od światła słonecznego.\n
+Miód: Trzymaj w szczelnym słoiku w temperaturze pokojowej, aby uniknąć krystalizacji.\n
+Czosnek: Przechowuj w suchym, ciemnym miejscu, aby zapobiec pleśni.\n
+Marchew: Trzymaj w lodówce w perforowanej torbie, aby zachować świeżość.\n
+Banany: Przechowuj w temperaturze pokojowej i z dala od innych owoców, aby nie dojrzewały zbyt szybko."
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="10dp"
+        android:padding="5dp"/>
+
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_marginTop="45dp"-->
+    <!--        android:layout_marginHorizontal="5dp"-->
+    <!--        android:layout_marginBottom="20dp"/>-->
+
+</androidx.cardview.widget.CardView>

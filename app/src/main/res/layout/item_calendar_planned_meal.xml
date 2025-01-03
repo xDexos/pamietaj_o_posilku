@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardView"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="20dp"
+        android:backgroundTint="#fdb913"
+        app:cardElevation="10dp">
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="20dp"
+            android:layout_gravity="start|center"
+            android:backgroundTint="#fedc89" >
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mealNameCardView"
+                app:cardCornerRadius="20dp"
+                android:background="#fedc89"
+                android:backgroundTint="#fedc89"
+                android:layout_margin="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:translationY="-3dp">
+
+                <TextView
+                    android:id="@+id/mealName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="180dp"
+                    android:layout_gravity="center"
+                    android:text="Nazwa posiłku"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="3dp"
+                    android:layout_margin="10dp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:background="#ffeec4"
+                android:backgroundTint="#ffeec4"
+                android:layout_centerHorizontal="true"
+                android:translationY="-14dp"
+                android:layout_below="@id/mealNameCardView" >
+
+                <TextView
+                    android:id="@+id/mealType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="180dp"
+                    android:layout_gravity="center"
+                    android:text="Typ posiłku"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:paddingHorizontal="10dp" />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="100dp"
+            android:backgroundTint="#fedc89">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mealTimeText"
+                android:text="00:00"
+                android:textSize="30dp"
+                android:layout_margin="5dp"
+                android:paddingHorizontal="10dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="20dp"
+            android:layout_gravity="end|center"
+            >
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/deleteButton"
+                android:contentDescription="Delete recipe"
+                android:src="@drawable/bin_red"
+                android:background="#fedc89"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

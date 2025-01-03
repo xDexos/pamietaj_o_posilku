@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:backgroundTint="#fdb913">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardViewName"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="20dp"
+            android:backgroundTint="#fedc89">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxWidth="300dp"
+                android:id="@+id/listNutriansTitleTextView"
+                android:text="Podsumowanie"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+
+                android:gravity="center"
+                android:padding="10dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardViewEnergy"
+            android:layout_below="@id/cardViewName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginHorizontal="20dp"
+            app:cardCornerRadius="20dp"
+            android:backgroundTint="#fedc89" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxWidth="300dp"
+                android:id="@+id/recipeEnergyTextView"
+                android:text="kalorie"
+                android:textSize="10dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:padding="10dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardViewNutrians"
+            android:layout_below="@id/cardViewEnergy"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginHorizontal="20dp"
+            app:cardCornerRadius="20dp"
+            android:backgroundTint="#fedc89">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxWidth="300dp"
+                android:id="@+id/recipeNutriansTextView"
+                android:text="wartości odżywcze"
+                android:textSize="10dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:padding="10dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
